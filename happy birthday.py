@@ -41,4 +41,4 @@ year = get_year()
 print("Loading...")
 time.sleep(3)
 
-print("You were born on: ", day, "/", month, "/", year, "Your age is: ", 2024 - year,)
+print("You are a big fatty: ", day, "/", month, "/", year, "Your age is: ", 2024 - year,)
