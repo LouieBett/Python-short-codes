@@ -41,4 +41,7 @@ year = get_year()
 print("Loading...")
 time.sleep(3)
 
+
+print("You are a big fatty: ", day, "e/", month, "/", year, "Your age is: ", 2024 - year,)
+
 print("You were born in the worst year: ", day, "/", month, "/", year, "Your age is: ", 2024 - year,)
