@@ -1,4 +1,4 @@
-import time
+import time, datetime
 
 print("This is a python code to say happy birthday once you put your date of birth")
 
@@ -7,7 +7,7 @@ input()
 
 print("Enter needed information below")
 
-#This asks for a user to enter the day they were born on
+# Functions to get day, month, year input
 def get_day():
     while True:
         try:
@@ -20,9 +20,9 @@ def get_day():
 def get_month():
     while True:
         try:
-            month = int(input("What month were you born in? (Number) "))
-            return month #This makes it go back to the start of the def
-        except ValueError: #This ignores the error
+            month = int(input("What month were you born in? (Number): "))
+            return month
+        except ValueError:
             print("Invalid input. Please enter a NUMBER.")
 
 #This asks for a user to enter the year they were born in
@@ -34,14 +34,24 @@ def get_year():
         except ValueError: #This ignores the error
             print("Invalid input. Please enter a NUMBER.")
 
+# Get user inputs
 day = get_day()
 month = get_month()
 year = get_year()
 
+# Current date
+now = datetime.datetime.now()
+
+# Calculate age
+birth_date = datetime.datetime(year, month, day)
+age = now.year - birth_date.year
+
+# Adjust age if birthday hasn't passed yet this year
+if (now.month, now.day) < (birth_date.month, birth_date.day):
+    age -= 1
+
+# Display birthdate and age
 print("Loading...")
 time.sleep(3)
+print(f"You were born on: {day}/{month}/{year}. Your age is: {age}")
 
-
-print("You are a big fatty: ", day, "e/", month, "/", year, "Your age is: ", 2024 - year,)
-
-print("You were born in the worst year: ", day, "/", month, "/", year, "Your age is: ", 2024 - year,)
