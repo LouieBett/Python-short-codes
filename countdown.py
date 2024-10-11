@@ -1,6 +1,8 @@
 import time
 
-count = 5
+pick = int(input("Pick a number you want to count down from: "))
+
+count = pick
 while count >= 0:
     print(count)
     time.sleep(1 )
