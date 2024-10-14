@@ -1,2 +1,3 @@
-# Python-short-codes
-Python codes for cool things
+#Cool python scripts
+
+This is a serise of python codes that do cool things
